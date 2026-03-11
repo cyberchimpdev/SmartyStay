@@ -6,8 +6,6 @@ import api from "../../api/axiosConfig";
 import { formatNPR, formatUSD } from "../../utils/currency";
 import GlassSelect from "../../components/common/GlassSelect";
 
-const BACKEND_URL = "https://intrinsically-nonperjured-kyoko.ngrok-free.dev";
-
 const fallbackImage =
   "https://images.unsplash.com/photo-1551887373-6a5bdac1fd1a?auto=format&fit=crop&w=1200&q=80";
 
@@ -54,7 +52,6 @@ const RoomsList = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
-      {/* Filters */}
       <div className="glass rounded-3xl p-6 mb-8">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
@@ -106,11 +103,7 @@ const RoomsList = () => {
             >
               <div className="h-48 overflow-hidden">
                 <img
-                  src={
-                    room.final_image
-                      ? `${BACKEND_URL}${room.final_image}`
-                      : fallbackImage
-                  }
+                  src={room.final_image || fallbackImage}
                   alt={room.name}
                   loading="lazy"
                   onError={(e) => (e.target.src = fallbackImage)}
@@ -121,7 +114,6 @@ const RoomsList = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between">
                   <h3 className="font-extrabold">{room.name}</h3>
-
                   <div className="flex items-center gap-1 text-amber-300">
                     <Star className="w-4 h-4 fill-amber-300" />
                     <span className="text-sm font-extrabold text-white/80">
