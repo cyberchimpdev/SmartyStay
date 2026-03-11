@@ -24,7 +24,6 @@ const ManageRooms = () => {
     image_url: "",
   });
 
-  // 🔥 Image preview fix (no memory leak)
   useEffect(() => {
     let objectUrl;
 
