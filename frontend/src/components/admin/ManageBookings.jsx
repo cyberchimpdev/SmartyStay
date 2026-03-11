@@ -118,7 +118,6 @@ const ManageBookings = () => {
 
   return (
     <div className="rounded-3xl p-7 bg-white/5 backdrop-blur-xl border border-white/10">
-      {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
         <div>
           <h2 className="text-2xl font-extrabold">Manage Bookings</h2>
@@ -153,7 +152,6 @@ const ManageBookings = () => {
         </div>
       </div>
 
-      {/* Content */}
       {filtered.length === 0 ? (
         <div className="mt-8 text-center rounded-2xl p-10 bg-white/5">
           <div className="text-lg font-extrabold">No bookings found</div>
@@ -181,7 +179,6 @@ const ManageBookings = () => {
                 key={b.id}
                 className="rounded-2xl p-5 flex flex-col md:flex-row md:items-center gap-6 bg-white/5 border border-white/10"
               >
-                {/* Room */}
                 <div className="flex items-center gap-4 md:w-72">
                   <img
                     src={imageUrl}
@@ -200,7 +197,6 @@ const ManageBookings = () => {
                   </div>
                 </div>
 
-                {/* Booking Info */}
                 <div className="flex-1 text-sm text-white/80 font-bold">
                   <div>
                     {b.check_in} → {b.check_out}
@@ -211,7 +207,6 @@ const ManageBookings = () => {
                     {b.user?.email && `(${b.user.email})`}
                   </div>
 
-                  {/* Nights + price */}
                   <div className="mt-2 text-xs text-white/70">
                     {nights} night{nights !== 1 ? "s" : ""} • {formatNPR(price)}{" "}
                     / night
@@ -226,7 +221,6 @@ const ManageBookings = () => {
                   </div>
                 </div>
 
-                {/* Actions */}
                 <div className="flex gap-3">
                   <button
                     disabled={isApproved || busyId === b.id}

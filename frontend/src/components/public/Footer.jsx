@@ -14,7 +14,6 @@ const Footer = () => {
     <footer className="safe-pad mt-20">
       <div className="max-w-7xl mx-auto">
         <div className="rounded-3xl px-6 py-12 bg-white/5 backdrop-blur-xl border border-white/10">
-          {/* Top Section */}
           <div className="grid md:grid-cols-3 gap-12">
             {/* Brand */}
             <div>
@@ -33,7 +32,6 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Quick Links */}
             <div>
               <h3 className="font-bold text-white mb-5 tracking-wide">
                 Quick Links
@@ -63,7 +61,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Social */}
             <div>
               <h3 className="font-bold text-white mb-5 tracking-wide">
                 Connect With Us
@@ -88,7 +85,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Divider */}
           <div className="mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-center gap-4 text-xs text-white/60 font-medium text-center">
             <p>
               © {new Date().getFullYear()} SmartStay Hotel Management System |

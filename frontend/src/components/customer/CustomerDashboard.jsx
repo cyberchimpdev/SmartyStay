@@ -11,7 +11,6 @@ const CustomerDashboard = () => {
       <DashboardNavbar title="Customer Overview" />
 
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Welcome Card */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,7 +36,6 @@ const CustomerDashboard = () => {
           </Link>
         </motion.div>
 
-        {/* Booking History Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

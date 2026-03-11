@@ -12,7 +12,6 @@ const AdminDashboard = () => {
       <DashboardNavbar title="Admin Control Panel" />
 
       <div className="max-w-7xl mx-auto px-4 py-10">
-        {/* Header */}
         <div className="mb-8">
           <h2 className="text-3xl font-extrabold tracking-tight">
             Administration
@@ -22,7 +21,6 @@ const AdminDashboard = () => {
           </p>
         </div>
 
-        {/* Tab Switcher */}
         <div className="relative inline-flex rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-2">
           <motion.div
             layout
@@ -54,7 +52,6 @@ const AdminDashboard = () => {
           </button>
         </div>
 
-        {/* Content */}
         <div className="mt-8">
           <AnimatePresence mode="wait">
             <motion.div

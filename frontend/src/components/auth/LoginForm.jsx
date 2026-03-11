@@ -41,7 +41,6 @@ const LoginForm = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-16">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,7 +56,6 @@ const LoginForm = () => {
           </p>
         </motion.div>
 
-        {/* Login Card */}
         <motion.form
           onSubmit={onSubmit}
           initial={{ opacity: 0, y: 16 }}
@@ -77,7 +75,6 @@ const LoginForm = () => {
           )}
 
           <div className="mt-6 space-y-5">
-            {/* Username OR Email */}
             <div className="relative">
               <User className="w-4 h-4 text-white/60 absolute left-4 top-3.5" />
               <input
@@ -89,7 +86,6 @@ const LoginForm = () => {
               />
             </div>
 
-            {/* Password */}
             <div className="relative">
               <Lock className="w-4 h-4 text-white/60 absolute left-4 top-3.5" />
               <input
@@ -113,7 +109,6 @@ const LoginForm = () => {
               </button>
             </div>
 
-            {/* Button */}
             <button
               disabled={busy}
               className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-60 transition rounded-full py-2 font-extrabold shadow-md"

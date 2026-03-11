@@ -10,7 +10,6 @@ const BookingForm = ({ roomId, price }) => {
   const [msg, setMsg] = useState("");
   const [error, setError] = useState(false);
 
-  // Calculate nights
   const nights = useMemo(() => {
     if (!checkIn || !checkOut) return null;
 
@@ -24,7 +23,6 @@ const BookingForm = ({ roomId, price }) => {
     return diff;
   }, [checkIn, checkOut]);
 
-  // Calculate total price
   const totalPrice = useMemo(() => {
     if (!nights || !price) return null;
     return nights * price;
@@ -101,7 +99,6 @@ const BookingForm = ({ roomId, price }) => {
       )}
 
       <form onSubmit={onSubmit} className="mt-5 grid sm:grid-cols-2 gap-3">
-        {/* Check In */}
         <div className="relative">
           <Calendar className="w-4 h-4 text-white/60 absolute left-4 top-3.5" />
           <input
@@ -114,7 +111,6 @@ const BookingForm = ({ roomId, price }) => {
           />
         </div>
 
-        {/* Check Out */}
         <div className="relative">
           <Calendar className="w-4 h-4 text-white/60 absolute left-4 top-3.5" />
           <input
@@ -127,7 +123,6 @@ const BookingForm = ({ roomId, price }) => {
           />
         </div>
 
-        {/* Submit Button */}
         <button
           disabled={loading}
           className="sm:col-span-2 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-60 text-white rounded-full py-2 font-extrabold transition"
@@ -136,7 +131,6 @@ const BookingForm = ({ roomId, price }) => {
         </button>
       </form>
 
-      {/* Booking Summary */}
       {nights !== null && (
         <div className="mt-4 glass-soft rounded-2xl p-4 text-sm font-bold">
           <div className="flex justify-between text-white/70">

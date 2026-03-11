@@ -4,7 +4,6 @@ export default function CustomSelect({ options, value, onChange }) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Close when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -42,7 +41,6 @@ export default function CustomSelect({ options, value, onChange }) {
         </span>
       </div>
 
-      {/* Dropdown Menu */}
       {open && (
         <div
           className="

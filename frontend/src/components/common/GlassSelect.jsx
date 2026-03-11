@@ -6,7 +6,6 @@ export default function GlassSelect({ options, value, onChange }) {
   const [position, setPosition] = useState(null);
   const buttonRef = useRef(null);
 
-  // Close on outside click
   useEffect(() => {
     const handleClick = (e) => {
       if (buttonRef.current && !buttonRef.current.contains(e.target)) {
@@ -17,7 +16,6 @@ export default function GlassSelect({ options, value, onChange }) {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  // Calculate dropdown position
   useEffect(() => {
     if (open && buttonRef.current) {
       const rect = buttonRef.current.getBoundingClientRect();
@@ -45,7 +43,7 @@ export default function GlassSelect({ options, value, onChange }) {
           outline-none
           focus:ring-2 focus:ring-indigo-300/40
           flex items-center justify-between gap-3
-          min-w-[140px]
+          min-w-35
         "
       >
         <span>{selected?.label}</span>
@@ -54,7 +52,6 @@ export default function GlassSelect({ options, value, onChange }) {
         </span>
       </button>
 
-      {/* Portal Dropdown */}
       {open &&
         position &&
         createPortal(

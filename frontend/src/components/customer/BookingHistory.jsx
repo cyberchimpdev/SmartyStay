@@ -116,7 +116,6 @@ const BookingHistory = () => {
         </div>
       ) : (
         <>
-          {/* Desktop Table */}
           <div className="hidden md:block mt-6 overflow-x-auto">
             <table className="w-full text-left">
               <thead>
@@ -172,7 +171,6 @@ const BookingHistory = () => {
             </table>
           </div>
 
-          {/* Mobile Cards */}
           <div className="md:hidden mt-6 space-y-3">
             {bookings.map((b) => {
               const status = String(b.status || "").toLowerCase();

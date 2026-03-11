@@ -1,7 +1,5 @@
 export const formatNPR = (usd) => {
-  // UI-only conversion (approx). Keeps backend unchanged.
-  // You can adjust rate anytime.
-  const rate = 133; // 1 USD ≈ 133 NPR (approx)
+  const rate = 133;
   const npr = Number(usd || 0) * rate;
 
   return new Intl.NumberFormat("en-NP", {

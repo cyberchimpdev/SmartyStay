@@ -28,7 +28,6 @@ const DashboardNavbar = ({ title }) => {
             </h1>
           </div>
 
-          {/* Right Section */}
           <div className="flex flex-wrap items-center gap-3">
             <Link
               to="/"
