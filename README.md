@@ -449,4 +449,3 @@ This project showcases:
 ---
 
 **SmartStay – A Complete Hotel Management Solution Built as a +2 Final Year Project**
-# SmartyStay
