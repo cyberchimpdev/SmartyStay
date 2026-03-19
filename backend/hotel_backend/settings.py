@@ -64,7 +64,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'smartstay_db',
         'USER': 'root',
-        'PASSWORD': '??m@g@r@$!m20??',
+        'PASSWORD': '??Asim20??',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
