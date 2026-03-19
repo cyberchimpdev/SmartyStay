@@ -65,7 +65,7 @@ DATABASES = {
         'NAME': 'smartstay_db',
         'USER': 'root',
         'PASSWORD': '??m@g@r@$!m20??',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
